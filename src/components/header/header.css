@@ -1,0 +1,10 @@
+.main{
+    background-color: #155849;
+    width: 100%;
+    position: fixed;
+    height: 3rem;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    
+}

@@ -1,0 +1,17 @@
+.nav-link {
+  color: wheat;
+  margin-left: 2rem;
+  padding-top: 5rem;
+  text-decoration: none;
+}
+
+/* Hover */
+.nav-link:hover {
+  color: white;
+}
+
+/* Active route link */
+.nav-link.active {
+  color: white;
+ 
+}
