@@ -7,11 +7,11 @@
 
 /* Hover */
 .nav-link:hover {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 /* Active route link */
 .nav-link.active {
-  color: white;
+  color: rgb(255, 255, 255);
  
 }
