@@ -3,8 +3,9 @@ import { all } from "../../../lib/db";
 
 
 export default function Index() {
+  //for git check
   
-  all('categories');
+  // all('categories');
   return (
     <>
 <h1>category index</h1>
