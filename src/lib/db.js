@@ -11,6 +11,18 @@ return alldata.data;
     throw error.response.data
     
 }
+}
+
+const createdata= async function(modalname,data){
+
+
+try{
+let alldata=await(axios.post(DBPATH+modalname,data));
+return alldata.data;
+}catch(error){
+    throw error.response.data
+    
+}
 
 }
-export {all}; 
+export {all,createdata}

@@ -24,7 +24,7 @@ export default function Index() {
     <div>
       {load ? (
         <Container>
-          <Link to="/createcategory" className="btn btn-success mb-2">
+          <Link to="/category/create" className="btn btn-success mb-2">
             Create
           </Link>
           <Table className="border">

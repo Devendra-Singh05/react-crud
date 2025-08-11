@@ -25,7 +25,7 @@ function App() {
                 path="/categories"
                 element={<Categories></Categories>}
               ></Route>
-              <Route path="/createcategory" element={<Createcategory></Createcategory>}></Route>
+              <Route path="/category/create" element={<Createcategory></Createcategory>}></Route>
               <Route path="/product" element={<Product></Product>}></Route>
             </Routes>
           </div>
