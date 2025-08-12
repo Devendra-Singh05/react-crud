@@ -4,6 +4,7 @@ import { createdata } from "../../../lib/db";
 import { Link, useNavigate } from "react-router-dom";
 export default function Create() {
   let [data, setData] = useState({ name: "", description: "" });
+let [error,setError]=useState([]);
   const changeit = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -30,7 +31,7 @@ export default function Create() {
             className="shadow-sm"
           />
           <Form.Text className="text-muted">
-            Your full name as per documents.
+            <span style={{color:"red" }}>{error}</span>
           </Form.Text>
         </Form.Group>
         <Form.Group controlId="description">
@@ -43,24 +44,30 @@ export default function Create() {
             className="shadow-sm"
           />
           <Form.Text className="text-muted">
-            Your description as per documents.
+            <span style={{color:"red" }}>{error}</span>
           </Form.Text>
         </Form.Group>
       </Form>
+      <div className="text-center ">
+
       <Button
         onClick={() => {
           createdata("categories", data)
-            .then((r) => {
-              window.alert(r.message);
-              redirect('/categories')
-            })
-            .catch((e) => {
-              window.alert(e.message);
-            });
-        }}
-      >
+          .then((r) => {
+            window.alert(r.message);
+            redirect('/categories')
+          })
+          .catch((e) => {
+            setError(e.message);
+            // window.alert(e.message);
+            
+            
+          });
+        }} className="mt-3"
+        >
         Save
       </Button>
+        </div>
     </div>
   );
 }

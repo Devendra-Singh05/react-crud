@@ -8,7 +8,10 @@ let alldata=await(axios.get(DBPATH+modalname));
 // console.log(alldata.data);
 return alldata.data;
 }catch(error){
-    throw error.response.data
+    if(error.response)
+    throw error.response.data;
+else
+    throw{message:"server might be off"};
     
 }
 }
